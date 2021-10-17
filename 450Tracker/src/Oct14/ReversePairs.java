@@ -1,9 +1,12 @@
 package Oct14;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class ReversePairs {
 	public int reversePairs(int[] nums) {
+        
         return merge(nums, 0, nums.length - 1);
     }
     public int merge(int[] arr, int l, int r){
@@ -20,11 +23,14 @@ public class ReversePairs {
     }
     public int mergesort(int[] nums, int l, int m, int r){
         int count = 0;
-        int j = m + 1;
+        int j = m + 1; // The reason why we added one here is to make sure
+        // we do not overlap with the left subarray
+        // the left array is from l to m inclusive
+        // the right array is from m + 1 to r inclusive
         
         
-        for (int i = l; i <= m; i ++){
-            while (j <= r && nums[i] > (2 * (long) nums[j])){
+        for (int i = l; i <= m; i ++){// left subarray
+            while (j <= r && nums[i] > (2 * (long) nums[j])){//right subarray
                 j ++;
             }
             count += (j - (m  + 1));
@@ -62,7 +68,7 @@ public class ReversePairs {
         
         ArrayList<Integer> temp = new ArrayList<Integer>();
         int left  = l;
-        int right = m + 1;
+        int right = m + 1; // to avoid overlapping from left array
         // Here we are creating an an array in which the subarrays will be sorted
         // into one array
         while (left <= m && right <= r){
@@ -92,6 +98,8 @@ public class ReversePairs {
 //        Then here we modify the original array from the temp
         return count;
     }
+    //Time: O(NLogN)
+    //Space: O(N)
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
