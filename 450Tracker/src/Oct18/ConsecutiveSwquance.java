@@ -2,7 +2,7 @@ package Oct18;
 
 import java.util.Arrays;
 import java.util.HashSet;
-
+//https://leetcode.com/problems/longest-consecutive-sequence/
 public class ConsecutiveSwquance {
 	public int longestConsecutive(int[] nums) {
         if (nums.length == 0){
