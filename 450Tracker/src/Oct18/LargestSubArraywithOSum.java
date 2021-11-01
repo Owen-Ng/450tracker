@@ -33,6 +33,7 @@ public class LargestSubArraywithOSum {
 	// Time: O(NLogN) Did not realize that Hashmap contains take O(LogN) Complexity I thought it was
 	// always constant.
 	// Space: O(N)
+	// Update: The time must be O(1) if the hash function was made properly
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] A  = {15,-2,2,-8,1,7,10,23};

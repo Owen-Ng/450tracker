@@ -1,6 +1,7 @@
 package Oct25;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class SubarrayXOR {
 	/*
@@ -64,6 +65,8 @@ public class SubarrayXOR {
 	// Space: O(1)
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		HashSet<Integer> hm = new HashSet<Integer>();
+		hm = new HashSet<Integer>();
 		int[] arr = {4, 2, 2, 6, 4};
 		int m = 6;
 		System.out.println(solution(arr, m));
