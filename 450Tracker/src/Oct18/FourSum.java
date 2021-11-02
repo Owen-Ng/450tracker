@@ -52,7 +52,10 @@ public class FourSum {
         return result;
 	    }
 	// Time: O(N^3)
-	// Space: O(N)
+	// Space: O(N) Space is actually O(1) because we generally ignore the space
+	//complexity concerning return types in most of the cases,i.e if vector is 
+	// expected as return type then that memory is already taken care of and not 
+	// a problem while optimizing the algorithm
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
