@@ -48,12 +48,36 @@ public class FlattenLinkedList {
         }
         return res.bottom;
     }
-//    Time: O(the amount of node);
-//    Space: O(1)
-//    Intuition:
-//    	Start merging the linkedlist at the very end
-//    	and progrssively going to the left side
-//    	then continuously merging until finished
+//  Time: O(the amount of node);
+//  Space: O(N)
+//  Intuition:
+//  	Start merging the linkedlist at the very end
+//  	and progrssively going to the left side
+//  	then continuously merging until finished
+    Node OPmerge(Node a, Node b){
+        
+        if (a.data > b.data){
+            Node tmp = a;
+            a = b;
+            b = tmp;
+        }
+        Node res = a;
+        while (a!= null && b != null){
+            Node tmp = null;
+            while(a != null && a.data <= b.data){
+                tmp = a;
+                a = a.bottom;
+                
+            }
+            
+            tmp.bottom = b;
+            Node tmp1 = a;
+            a = b;
+            b = tmp1;
+        }
+        return res;
+    }// If used this one, the space complexity would be O(1)
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
