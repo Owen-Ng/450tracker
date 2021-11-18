@@ -1,4 +1,7 @@
 package Nov9;
+
+import java.util.HashMap;
+
 class Node
 {
 	int data;
@@ -15,6 +18,7 @@ class Node
 public class FlattenLinkedList {
 	Node flatten(Node root)
     {
+       
 	// Your code here
 	    if (root == null || root.next == null){
 	        return root;
