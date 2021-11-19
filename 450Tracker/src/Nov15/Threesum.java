@@ -47,6 +47,7 @@ public class Threesum {
 	public List<List<Integer>> OPthreeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<List<Integer>>();
+        
         for (int i = 0; i < nums.length - 2; i ++){ // avoid duplication.
             if (i == 0 || i> 0 && nums[i] != nums[i -  1]){
             int low = i + 1;
