@@ -27,7 +27,7 @@ public class searchinrotatedsortedarray {
         }
         return -1;
     }// Time : O(logn)
-	// Space: O(1)
+	// Space: O(1)git st
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
