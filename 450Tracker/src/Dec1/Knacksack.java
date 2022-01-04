@@ -1,7 +1,11 @@
 package Dec1;
 
 import java.util.Arrays;
-
+class Item {
+	int weight;
+	int value;
+	
+}
 public class Knacksack {
 	 double fractionalKnapsack(int W, Item arr[], int n) 
 	    {
